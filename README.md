@@ -28,12 +28,6 @@
 
 ![Mobile](screenshots/mobile.png)
 
-</div>
-
----
-
-</div>
-
 ---
 
 ## 📋 Daftar Isi
