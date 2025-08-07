@@ -98,5 +98,5 @@ temp/
 # Add any project-specific files or folders to ignore here
 
 # Uncomment line below if you want to ignore screenshots
-# screenshots/
-# assets/images/screenshots/
+screenshots/
+assets/images/screenshots/
