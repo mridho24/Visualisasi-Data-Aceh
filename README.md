@@ -1,8 +1,34 @@
-# 🌟 DataNAD - Portal Visualisasi Data Aceh
+# 🌟 DataNAD - Portal Visualisasi Data- [🌟 Tentang Proyek](#-tentang-proyek)
+- [✨ Fitur Utama](#-fitur-utama)
+- [📸 Screenshots](#-screenshots)
+- [💻 Teknologi](#-teknologi)
+- [🏗️ Arsitektur](#️-arsitektur)
+- [📦 Instalasi](#-instalasi)
+- [🔧 Penggunaan](#-penggunaan)
+- [📊 Dataset](#-dataset)
+- [🤝 Kontribusi](#-kontribusi)
+- [👨‍💻 Penulis](#-penulis)<div align="center">
+
+![---
+
+## 📸 Screenshots
 
 <div align="center">
 
-![DataNAD Logo](https://img.shields.io/badge/DataNAD-Portal%20Data%20Aceh-blue?style=for-the-badge&logo=chart-line)
+#### 🏠 Dashboard Utama
+![Dashboard](screenshots/dashboard.png)
+
+#### 📊 Halaman Visualisasi
+![Visualization](screenshots/visualization.png)
+
+#### 📱 Mobile View
+![Mobile](screenshots/mobile.png)
+
+</div>
+
+---
+
+## 💻 TeknologiaNAD Logo](https://img.shields.io/badge/DataNAD-Portal%20Data%20Aceh-blue?style=for-the-badge&logo=chart-line)
 
 **Portal data terpadu yang menyediakan akses mudah terhadap berbagai dataset resmi pemerintah untuk mendukung transparansi dan pengambilan keputusan berbasis data di wilayah Aceh**
 
