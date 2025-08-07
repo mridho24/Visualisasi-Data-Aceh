@@ -1,4 +1,4 @@
-# 🌟 DataNAD - Portal Visualisasi Data- [🌟 Tentang Proyek](#-tentang-proyek)
+# 🌟 DataLens Aceh - Portal Visualisasi Data- [🌟 Tentang Proyek](#-tentang-proyek)
 
 - [✨ Fitur Utama](#-fitur-utama)
 - [📸 Screenshots](#-screenshots)
@@ -9,8 +9,6 @@
 - [📊 Dataset](#-dataset)
 - [🤝 Kontribusi](#-kontribusi)
 - [👨‍💻 Penulis](#-penulis)<div align="center">
-
-![---
 
 ## 📸 Screenshots
 
@@ -344,7 +342,7 @@ Deskripsi singkat tentang bug
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:muhammadridhor24@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mridho24)
 
-**🎓 Mahasiswa Teknik Informatika**  
+**🎓 Mahasiswa Informatika**  
 **📍 Banda Aceh, Indonesia**  
 **💼 KKP Project 2025**
 
@@ -369,6 +367,6 @@ Deskripsi singkat tentang bug
 
 ---
 
-_© 2025 DataNAD. Portal Data Nanggroe Aceh Darussalam. All rights reserved._
+_© 2025 DataNAD. Portal Data Aceh. All rights reserved._
 
 </div>
