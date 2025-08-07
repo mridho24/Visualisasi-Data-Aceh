@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Dataset</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <button class="back-button" onclick="history.back()">← Kembali</button>
+    
+    <div class="detail-header">
+      <h1 id="dataset-title">Judul Dataset</h1>
+      <p id="dataset-description">Deskripsi dataset akan tampil di sini.</p>
+    </div>
+
+    <div class="detail-actions">
+      <button onclick="showTable()" class="active" id="table-btn">Tampilkan Tabel</button>
+      <button onclick="showChart()" id="chart-btn">Tampilkan Chart</button>
+    </div>
+
+    <div id="table-view">
+      <div class="table-container">
+        <table>
+          <thead id="table-head"></thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="chart-view" style="display:none;">
+      <div class="chart-controls">
+        <div class="controls-title">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 3v18h18"/>
+            <path d="M18 17l-5-5-2 2-4-4"/>
+          </svg>
+          Pengaturan Visualisasi Data
+        </div>
+
+        <div class="controls-grid">
+          <div class="control-group">
+            <label class="control-label">Sumbu X (Horizontal)</label>
+            <select id="xColumnSelect" class="control-select">
+              <option value="">Pilih kolom untuk sumbu X...</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Sumbu Y (Vertikal)</label>
+            <select id="yColumnSelect" class="control-select">
+              <option value="">Pilih kolom untuk sumbu Y...</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Jenis Chart</label>
+            <div class="chart-type-buttons">
+              <button class="chart-type-btn active" data-type="auto">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                Auto
+              </button>
+              <button class="chart-type-btn" data-type="bar">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 20V10M12 20V4M6 20v-6"/>
+                </svg>
+                Bar
+              </button>
+              <button class="chart-type-btn" data-type="line">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 3v18h18"/>
+                  <path d="M18 17l-5-5-2 2-4-4"/>
+                </svg>
+                Line
+              </button>
+              <button class="chart-type-btn" data-type="pie">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v10l8-8a10 10 0 0 0-8-2z"/>
+                  <path d="M12 12l8-8a10 10 0 1 1-8 8z"/>
+                </svg>
+                Pie
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button class="update-btn" onclick="updateChart()">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;">
+            <path d="M1 4v6h6"/>
+            <path d="M23 20v-6h-6"/>
+            <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10"/>
+            <path d="M3.51 15a9 9 0 0 0 14.85 3.36L23 14"/>
+          </svg>
+          Update Chart
+        </button>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="chartCanvas"></canvas>
+      </div>
+
+      <!-- Statistics Section -->
+      <div id="statistics-section" class="statistics-container">
+        <div class="statistics-header">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 3v18h18"/>
+            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+          </svg>
+          <h3>Analisis & Statistik Data</h3>
+        </div>
+
+        <div class="statistics-grid">
+          <div class="stat-card">
+            <div class="stat-header">
+              <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+              </svg>
+              <h4>Ringkasan Dataset</h4>
+            </div>
+            <div class="stat-content">
+              <div class="stat-item">
+                <span class="stat-label">Total Data:</span>
+                <span class="stat-value" id="total-records">-</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Jumlah Kolom:</span>
+                <span class="stat-value" id="total-columns">-</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Tipe Chart:</span>
+                <span class="stat-value" id="current-chart-type">-</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20V10"/>
+                <path d="M18 20V4"/>
+                <path d="M6 20v-4"/>
+              </svg>
+              <h4>Statistik Sumbu Y</h4>
+            </div>
+            <div class="stat-content" id="y-axis-stats">
+              <div class="stat-item">
+                <span class="stat-label">Kolom:</span>
+                <span class="stat-value" id="y-column-name">-</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Nilai Tertinggi:</span>
+                <span class="stat-value" id="max-value">-</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Nilai Terendah:</span>
+                <span class="stat-value" id="min-value">-</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Rata-rata:</span>
+                <span class="stat-value" id="avg-value">-</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Total:</span>
+                <span class="stat-value" id="sum-value">-</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"/>
+                <path d="M19 7h-4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+              </svg>
+              <h4>Distribusi Data</h4>
+            </div>
+            <div class="stat-content">
+              <div class="stat-item">
+                <span class="stat-label">Kategori Terbanyak:</span>
+                <span class="stat-value" id="top-category">-</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Jumlah Kategori:</span>
+                <span class="stat-value" id="category-count">-</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Rentang Data:</span>
+                <span class="stat-value" id="data-range">-</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card full-width">
+            <div class="stat-header">
+              <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                <polyline points="14,2 14,8 20,8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10,9 9,9 8,9"/>
+              </svg>
+              <h4>Interpretasi Hasil</h4>
+            </div>
+            <div class="stat-content">
+              <div id="chart-interpretation" class="interpretation-text">
+                Pilih kolom dan tipe chart untuk melihat interpretasi data...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/detailController.js"></script>
+</body>
+</html>
