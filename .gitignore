@@ -96,3 +96,7 @@ temp/
 
 # Project specific
 # Add any project-specific files or folders to ignore here
+
+# Screenshots folder (contains project screenshots)
+screenshots/
+assets/images/screenshots/
