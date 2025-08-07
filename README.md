@@ -1,4 +1,5 @@
 # 🌟 DataNAD - Portal Visualisasi Data- [🌟 Tentang Proyek](#-tentang-proyek)
+
 - [✨ Fitur Utama](#-fitur-utama)
 - [📸 Screenshots](#-screenshots)
 - [💻 Teknologi](#-teknologi)
@@ -16,26 +17,20 @@
 <div align="center">
 
 #### 🏠 Dashboard Utama
+
 ![Dashboard](screenshots/dashboard.png)
 
 #### 📊 Halaman Visualisasi
+
 ![Visualization](screenshots/visualization.png)
 
 #### 📱 Mobile View
+
 ![Mobile](screenshots/mobile.png)
 
 </div>
 
 ---
-
-## 💻 TeknologiaNAD Logo](https://img.shields.io/badge/DataNAD-Portal%20Data%20Aceh-blue?style=for-the-badge&logo=chart-line)
-
-**Portal data terpadu yang menyediakan akses mudah terhadap berbagai dataset resmi pemerintah untuk mendukung transparansi dan pengambilan keputusan berbasis data di wilayah Aceh**
-
-[![GitHub Stars](https://img.shields.io/github/stars/mridho24/Visualisasi-Data-Aceh?style=social)](https://github.com/mridho24/Visualisasi-Data-Aceh/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/mridho24/Visualisasi-Data-Aceh?style=social)](https://github.com/mridho24/Visualisasi-Data-Aceh/network/members)
-
-[📖 Dokumentasi](#dokumentasi) · [🐛 Laporkan Bug](https://github.com/mridho24/Visualisasi-Data-Aceh/issues) · [💡 Request Fitur](https://github.com/mridho24/Visualisasi-Data-Aceh/issues)
 
 </div>
 
@@ -99,7 +94,7 @@
 
 ---
 
-##  Teknologi
+## Teknologi
 
 ### 🎯 **Frontend Technologies**
 
