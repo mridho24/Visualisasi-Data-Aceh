@@ -1,4 +1,4 @@
-# 🌟 DataLens Aceh - Portal Visualisasi Data- [🌟 Tentang Proyek](#-tentang-proyek)
+# 🌟 PintoData - Portal Visualisasi Data- [🌟 Tentang Proyek](#-tentang-proyek)
 
 - [✨ Fitur Utama](#-fitur-utama)
 - [📸 Screenshots](#-screenshots)
@@ -48,7 +48,7 @@
 
 ## 🌟 Tentang Proyek
 
-**DataNAD (Data Nanggroe Aceh Darussalam)** adalah aplikasi web modern yang dirancang khusus untuk memvisualisasikan data statistik pemerintah Provinsi Aceh. Proyek ini dikembangkan sebagai bagian dari program **Kerja Kerja Praktik (KKP)** dengan tujuan meningkatkan transparansi data pemerintah dan memudahkan akses informasi publik.
+**PintoData (Pintu Data)** adalah aplikasi web modern yang dirancang khusus untuk memvisualisasikan data statistik pemerintah Provinsi Aceh. Proyek ini dikembangkan sebagai bagian dari program **Kerja Kerja Praktik (KKP)** dengan tujuan meningkatkan transparansi data pemerintah dan memudahkan akses informasi publik.
 
 ### 🎯 Tujuan Proyek
 
@@ -251,7 +251,7 @@ code .
 
 ## 📊 Dataset
 
-### 📈 Dataset yang Tersedia
+### 📈 Kilas Dataset
 
 | Dataset                        | ID         | Deskripsi                        | Visualisasi Terbaik      |
 | ------------------------------ | ---------- | -------------------------------- | ------------------------ |
@@ -367,6 +367,6 @@ Deskripsi singkat tentang bug
 
 ---
 
-_© 2025 DataNAD. Portal Data Aceh. All rights reserved._
+_© 2025 PintoData. Portal Data Aceh. All rights reserved._
 
 </div>
